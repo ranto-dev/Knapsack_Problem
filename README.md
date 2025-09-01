@@ -1,47 +1,38 @@
-# Knapsack Problem
+## Knapsack Problem
 
-Ce projet implémente des solutions pour le problème du sac à dos (Knapsack Problem), un problème classique d'optimisation combinatoire.
+## 1. Description
 
-## Description
+The Knapsack Problem is a classic combinatorial optimization problem. Given a set of items, each with a specific weight and value, the objective is to select a subset of items to maximize the total value without exceeding the knapsack's capacity.
 
-Le problème du sac à dos consiste à sélectionner un sous-ensemble d'objets avec des poids et des valeurs donnés, de manière à maximiser la valeur totale sans dépasser la capacité du sac.
+This project offers efficient solutions for the 0/1 Knapsack Problem using dynamic programming. It is designed to be flexible, enabling users to experiment with various item lists and knapsack sizes via a command-line interface.
 
-## Fonctionnalités
+## 2. Features
 
-- Implémentation de l'algorithme dynamique pour le problème du sac à dos 0/1
-- Support de différentes tailles de sacs et listes d'objets
-- Interface en ligne de commande pour tester différentes instances
+- Dynamic programming implementation for the 0/1 Knapsack Problem
+- Support for different knapsack capacities and item lists
+- Command-line interface for testing custom instances
 
-## Installation
+## 3. Installation
+
+Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/votre-utilisateur/Knapsack_Problem.git
+git clone git@github.com:ranto-dev/Knapsack_Problem.git
 cd Knapsack_Problem
 ```
 
-## Utilisation
+### Usage
 
-1. Placez vos données d'entrée dans le format attendu.
-2. Exécutez le programme principal :
+Run `index.html` file in your browser to launch the interactive demo.
 
-```bash
-python main.py
-```
+## 4. Screenshot
 
-## Exemple d'entrée
+<img width="100%" src="./cap.png" alt="screenshot" />
 
-```
-Capacité: 50
-Objets:
-- Poids: 10, Valeur: 60
-- Poids: 20, Valeur: 100
-- Poids: 30, Valeur: 120
-```
+## 5. Author
 
-## Auteurs
+- Developed by [ranto-dev](https://github.com/ranto-dev)
 
-- [Votre Nom](https://github.com/votre-utilisateur)
+## 6. License
 
-## Licence
-
-Ce projet est sous licence MIT.
+This project is licensed under the MIT License.
