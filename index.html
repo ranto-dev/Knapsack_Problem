@@ -1,62 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulation du Problème du Sac à Dos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 font-sans text-gray-800">
-
-    <!-- Title Section -->
-    <header class="text-center py-10 bg-blue-900 text-white">
-        <h1 class="text-4xl font-bold tracking-wide">Simulation du Problème du Sac à Dos</h1>
-        <p class="mt-2 text-lg">Résolvez le problème du sac à dos avec votre propre configuration d'objets</p>
-    </header>
-
-    <!-- Main Form Section -->
-    <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg mt-12 mb-10">
-        <form id="knapsack-form">
-            <div class="space-y-6">
-                <div class="grid grid-cols-2 gap-6">
-                    <div>
-                        <label for="capacity" class="block font-semibold text-gray-700">Capacité du sac à dos :</label>
-                        <input type="number" id="capacity" min="1" value="15" required
-                            class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label for="item-count" class="block font-semibold text-gray-700">Nombre d'objets :</label>
-                        <input type="number" id="item-count" min="1" max="10" value="3" required
-                            class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                </div>
-
-                <button type="button" onclick="generateItems()"
-                    class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-200">
-                    Définir les objets
-                </button>
-
-                <div id="items-input"></div>
-
-                <button type="submit" id="solve-btn"
-                    class="w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-200 mt-6">
-                    Résoudre
-                </button>
-            </div>
-        </form>
-    </div>
-
-    <!-- Result Section -->
-    <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-        <div id="result"></div>
-    </div>
-
-    <!-- Script for handling knapsack problem logic -->
-    <script src="javascript.js"></script>
-
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite-project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
