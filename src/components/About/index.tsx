@@ -1,10 +1,12 @@
 import React from "react";
+import Introduction from "./Introduction";
+import Example from "./Example";
 
 const AboutKnapsack: React.FC = () => {
   return (
-    <section className="py-12 bg-gradient-to-b text-blue-950">
-      <div className="max-w-5xl mx-auto px-6">
-      </div>
+    <section className="w-full">
+        <Introduction />
+        <Example />
     </section>
   );
 };

@@ -6,8 +6,8 @@ interface Item {
 }
 
 const Knapsack: React.FC = () => {
-  const [itemCount, setItemCount] = useState<number>(2); // ✅ 2 items par défaut
-  const [capacity, setCapacity] = useState<number>(10);
+  const [itemCount, setItemCount] = useState<number>(2);
+  const [capacity, setCapacity] = useState<number>(1);
   const [items, setItems] = useState<Item[]>([]);
   const [result, setResult] = useState<{
     maxValue: number;
@@ -15,7 +15,6 @@ const Knapsack: React.FC = () => {
   } | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  // Génère 2 objets dès le démarrage
   useEffect(() => {
     generateItems(2);
   }, []);
@@ -80,7 +79,7 @@ const Knapsack: React.FC = () => {
       });
 
       setIsLoading(false);
-    }, 1000); // ⏳ petit effet spinner
+    }, 2000);
   };
 
   return (
@@ -90,7 +89,6 @@ const Knapsack: React.FC = () => {
       </h1>
 
       <form onSubmit={solveKnapsack} className="mt-6 space-y-4">
-        {/* Capacité */}
         <div>
           <label className="block font-semibold text-gray-700">
             Bag Capacity :
@@ -101,11 +99,10 @@ const Knapsack: React.FC = () => {
             required
             value={capacity}
             onChange={(e) => setCapacity(parseInt(e.target.value) || 0)}
-            className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-950"
           />
         </div>
 
-        {/* Nombre d’objets */}
         <div>
           <label className="block font-semibold text-gray-700">
             Number of Items :
@@ -120,11 +117,10 @@ const Knapsack: React.FC = () => {
               setItemCount(count);
               generateItems(count);
             }}
-            className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-950"
           />
         </div>
 
-        {/* Liste dynamique des objets */}
         {items.map((item, i) => (
           <div key={i} className="grid grid-cols-2 gap-6 mt-4">
             <div>
@@ -143,7 +139,7 @@ const Knapsack: React.FC = () => {
                 onChange={(e) =>
                   handleItemChange(i, "weight", parseInt(e.target.value) || 0)
                 }
-                className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-950"
               />
             </div>
 
@@ -163,7 +159,7 @@ const Knapsack: React.FC = () => {
                 onChange={(e) =>
                   handleItemChange(i, "value", parseInt(e.target.value) || 0)
                 }
-                className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-950"
               />
             </div>
           </div>
@@ -172,19 +168,18 @@ const Knapsack: React.FC = () => {
         {items.length > 0 && (
           <button
             type="submit"
-            className="mt-6 inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="mt-6 inline-block px-6 py-2 bg-blue-950 text-white rounded-lg hover:scale-110 ease-in transition"
           >
             Solve
           </button>
         )}
       </form>
 
-      {/* Résultat ou Spinner */}
       <div className="mt-8">
         {isLoading ? (
           <div className="flex flex-col items-center justify-center">
-            <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-            <p className="mt-3 text-blue-600 font-medium">Calculating...</p>
+            <div className="w-10 h-10 border-4 border-blue-950 border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-3 text-blue-950 font-medium">Calculating...</p>
           </div>
         ) : (
           result && (

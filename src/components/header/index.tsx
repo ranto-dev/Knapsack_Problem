@@ -8,7 +8,7 @@ const Header = () => {
         omnis quasi aperiam maiores, saepe similique dolor? Facere explicabo
         repudiandae sequi cumque molestiae!
       </p>
-      <a href="" className="rounded-full p-4 bg-white text-blue-950">
+      <a href="#try-it" className="rounded-full p-4 bg-white text-blue-950">
         Try now
       </a>
     </div>
