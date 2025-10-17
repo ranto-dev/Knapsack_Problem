@@ -9,7 +9,7 @@ const Header = () => {
         repudiandae sequi cumque molestiae!
       </p>
       <a href="" className="rounded-full p-4 bg-white text-blue-950">
-        Learn More
+        Try now
       </a>
     </div>
   );
