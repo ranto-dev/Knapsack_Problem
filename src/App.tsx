@@ -1,8 +1,8 @@
 import AboutKnapsack from "./components/About";
+import Footer from "./components/footer";
 import Header from "./components/header";
 import Knapsack from "./components/Knapsack";
 import HowItWorks from "./components/Knapsack/HowItWorks";
-import SomeLinks from "./components/Knapsack/SomeLinks";
 
 const App = () => {
   return (
@@ -12,10 +12,10 @@ const App = () => {
       <div id="try-it" className="grid row lg:grid-cols-2 gap-4 p-8">
         <div>
           <HowItWorks />
-          <SomeLinks />
         </div>
         <Knapsack />
       </div>
+      <Footer />
     </>
   );
 };

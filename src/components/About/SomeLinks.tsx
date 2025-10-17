@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const SomeLinks = () => {
   return (
     <motion.div
+      id="docs"
       className="bg-white p-6 md:p-8 rounded-2xl shadow-lg"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}

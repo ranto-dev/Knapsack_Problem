@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { FaBrain } from "react-icons/fa6";
+import SomeLinks from "./SomeLinks";
 
 const Introduction = () => {
   return (
-    <div className="grid grid-cols-2 p-10">
-      <div className="w-full flex flex-col gap-4">
+    <div className="grid grid-cols-2 p-10 mt-5">
+      <div className="w-full flex flex-col gap-2">
         <motion.h1
           className="text-2xl text-center"
           initial={{ opacity: 0, y: -40 }}
@@ -47,6 +48,7 @@ const Introduction = () => {
             🎯
           </p>
         </motion.div>
+        <SomeLinks />
       </div>
       <div className="w-full flex justify-center items-center">
         <img
@@ -54,7 +56,7 @@ const Introduction = () => {
           alt="the besst introduction image of knapsack problem"
         />
         <div
-          className="absolute -z-10 right-10 bottom-5 w-0 h-0 
+          className="absolute -z-10 right-10 -bottom-58 w-0 h-0 
              border-t-[300px] border-t-transparent 
              border-r-[600px] border-r-blue-950"
         ></div>
