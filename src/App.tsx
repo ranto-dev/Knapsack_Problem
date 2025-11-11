@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Header />
       <AboutKnapsack />
-      <div id="try-it" className="grid row lg:grid-cols-2 gap-4 p-8">
+      <div id="try-it" className="grid container m-auto row lg:grid-cols-2 gap-4 p-8">
         <div>
           <HowItWorks />
         </div>

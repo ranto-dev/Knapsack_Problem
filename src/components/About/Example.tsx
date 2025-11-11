@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaBookOpen } from "react-icons/fa6";
 const Example = () => {
   return (
-    <div className="grid grid-cols-2 p-10">
+    <div className="grid grid-cols-2 p-10 container m-auto">
         <div className="w-full flex justify-center items-center">
             <img className="w-100" src="/example.png" alt="the best example image of knapsack problem" />
         </div>
