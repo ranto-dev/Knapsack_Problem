@@ -4,7 +4,7 @@ import SomeLinks from "./SomeLinks";
 
 const Introduction = () => {
   return (
-    <div className="grid grid-cols-2 p-10 mt-5 container m-auto">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 p-10 mt-5 container m-auto">
       <div className="w-full flex flex-col flex-wrap gap-2">
         <motion.h1
           className="text-2xl text-center"

@@ -4,7 +4,7 @@ import { FaRocket } from "react-icons/fa6";
 const HowItWorks = () => {
   return (
     <motion.div
-      className="bg-white p-6 md:p-8 rounded-2xl shadow-lg mb-10"
+      className="bg-white p-6 md:p-8 rounded-2xl shadow-lg mb-10 w-full"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

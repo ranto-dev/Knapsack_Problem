@@ -9,10 +9,11 @@ const App = () => {
     <>
       <Header />
       <AboutKnapsack />
-      <div id="try-it" className="grid container m-auto row lg:grid-cols-2 gap-4 p-8">
-        <div>
-          <HowItWorks />
-        </div>
+      <div
+        id="try-it"
+        className="grid lg:grid-cols-2 gap-8 lg:gap-0 p-10 container m-auto"
+      >
+        <HowItWorks />
         <Knapsack />
       </div>
       <Footer />
