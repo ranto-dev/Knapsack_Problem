@@ -1,10 +1,8 @@
-# 🎒 Knapsack Problem Solver
-
 <div align="center">
 
-## Interactive Learning Project for the 0/1 Knapsack Algorithm
+  <img src="banner.png" alt="Knapsack Banner" width="100%" />
 
-  <img src="./banner.png" alt="Knapsack Banner" width="100%" />
+  <h2>🎒 Knapsack Problem Solver : Interactive Learning Project for the 0/1 Knapsack Algorithm</h2>
 
   <p>
     An interactive and educational implementation of the <b>0/1 Knapsack Problem</b>  
@@ -23,7 +21,9 @@ It provides a visual and hands-on way to explore how dynamic programming is used
 
 ## Documentation & Learning Resources
 
-To better understand the algorithm, here are some useful resources:
+You should see my documentation [Here](/docs/docs.md)
+
+Another, to better understand the algorithm, here are some useful resources:
 
 - 📘 [https://en.wikipedia.org/wiki/Knapsack_problem](https://en.wikipedia.org/wiki/Knapsack_problem)
 - 📗 [https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
