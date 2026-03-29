@@ -1,38 +1,83 @@
-## Knapsack Problem
+# 🎒 Knapsack Problem Solver
 
-## 1. Description
+<div align="center">
 
-The Knapsack Problem is a classic combinatorial optimization problem. Given a set of items, each with a specific weight and value, the objective is to select a subset of items to maximize the total value without exceeding the knapsack's capacity.
+## Interactive Learning Project for the 0/1 Knapsack Algorithm
 
-This project offers efficient solutions for the 0/1 Knapsack Problem using dynamic programming. It is designed to be flexible, enabling users to experiment with various item lists and knapsack sizes via a command-line interface.
+  <img src="./banner.png" alt="Knapsack Banner" width="100%" />
 
-## 2. Features
+  <p>
+    An interactive and educational implementation of the <b>0/1 Knapsack Problem</b>  
+    built with <b>React</b> and <b>TypeScript</b>.
+  </p>
 
-- Dynamic programming implementation for the 0/1 Knapsack Problem
-- Support for different knapsack capacities and item lists
-- Command-line interface for testing custom instances
+</div>
 
-## 3. Installation
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Status](https://img.shields.io/badge/Status-In_Progress-orange)
 
-Clone the repository and navigate to the project directory:
+## Description
+
+The **Knapsack Problem Solver** is an interactive web-based application designed to help users understand and experiment with the **0/1 Knapsack algorithm**.
+
+It provides a visual and hands-on way to explore how dynamic programming is used to solve optimization problems efficiently.
+
+## Documentation & Learning Resources
+
+To better understand the algorithm, here are some useful resources:
+
+- 📘 [https://en.wikipedia.org/wiki/Knapsack_problem](https://en.wikipedia.org/wiki/Knapsack_problem)
+- 📗 [https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
+- 🎥 [https://www.youtube.com/results?search_query=knapsack+problem+dynamic+programming](https://www.youtube.com/results?search_query=knapsack+problem+dynamic+programming)
+
+## Features
+
+- **0/1 Knapsack Algorithm Implementation**
+  Efficient solution using dynamic programming.
+
+- **Interactive Experimentation**
+  Test different item sets and capacities in real time.
+
+- **Visualization Ready**
+  Helps understand how optimal solutions are built step by step.
+
+- **User-Friendly Interface**
+  Simple and intuitive UI built with React.
+
+- **Fast Computation**
+  Optimized logic using TypeScript.
+
+## Tech Stack
+
+- ⚛️ React
+- 🟦 TypeScript
+- 🎨 Tailwindcss
+- 🧠 Dynamic Programming
+
+## Getting Started
+
+### 📦 Installation
 
 ```bash
 git clone git@github.com:ranto-dev/Knapsack_Problem.git
 cd Knapsack_Problem
 ```
 
-### Usage
+### ▶️ Run the project
 
-Run `index.html` file in your browser to launch the interactive demo.
+```bash
+# install dependencies
+npm install
 
-## 4. Screenshot
+# start development server
+npm run dev
+```
 
-<img width="100%" src="./cap.png" alt="screenshot" />
+## Upcoming Features
 
-## 5. Author
-
-- Developed by [ranto-dev](https://github.com/ranto-dev)
-
-## 6. License
-
-This project is licensed under the MIT License.
+- [ ] Step-by-step visualization of DP table
+- [ ] Graphical representation of selected items
+- [ ] Support for Fractional Knapsack
+- [ ] Import/export dataset (JSON/CSV)
+- [ ] Interactive learning mode (guided explanations)
+- [ ] Responsive UI improvements
+- [ ] Deployment (Vercel / Netlify)
