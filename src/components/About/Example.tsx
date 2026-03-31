@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaBookOpen } from "react-icons/fa6";
+
 const Example = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 p-10 container m-auto">
