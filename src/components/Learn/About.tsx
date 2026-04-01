@@ -1,22 +1,23 @@
 import { motion } from "framer-motion";
 import Card from "../Card";
 import Links from "./Links";
+import TravelersImage from "../../assets/travelers.png";
 
 const AboutComponent = () => {
   return (
-    <div className="flex flex-row justify-center items-center container m-auto">
-      <div className="w-full flex flex-col flex-wrap gap-2">
+    <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start md:items-start lg:items-start xl:items-start gap-2 my-4 container mx-auto">
+      <div className="w-full">
         <div>
           <motion.h1
-            className="text-2xl text-center"
+            className="text-xl sm:text-lg md:text-xl text-center"
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Learn Knapsack Problem Algorithm
+            Knapsack Problem Algorithm
           </motion.h1>
           <motion.p
-            className="text-center text-sm m-2"
+            className="text-center text-xs m-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -42,12 +43,8 @@ const AboutComponent = () => {
           <Links />
         </Card>
       </div>
-      <div className="w-full flex justify-center  items-center">
-        <img
-          src="/about.jpg"
-          alt="the besst introduction image of knapsack problem"
-          className="w-72 h-full"
-        />
+      <div className="w-full flex justify-center items-center">
+        <img src={TravelersImage} alt="" className="w-full h-full" />
       </div>
     </div>
   );

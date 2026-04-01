@@ -9,7 +9,7 @@ const Card = ({ title, children }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-xl mb-4 flex items-center gap-2">{title}</h2>
+      <h2 className="text-xl font-medium mb-4 flex items-center gap-2">{title}</h2>
       <p className="text-gray-700 text-sm leading-relaxed">{children}</p>
     </motion.div>
   );

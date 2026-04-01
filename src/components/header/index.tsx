@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="w-full bg-blue-700 text-white text-center py-20 flex flex-col items-center justify-center gap-6 relative overflow-hidden">
       <motion.h1
-        className="xs:text-2xl sm:text-3xl md:text-2xl font-extrabold tracking-wide"
+        className="text-2xl md:text-3xl font-semibold tracking-wide"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
