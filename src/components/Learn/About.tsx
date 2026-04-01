@@ -5,7 +5,7 @@ import TravelersImage from "../../assets/travelers.png";
 
 const AboutComponent = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start md:items-start lg:items-start xl:items-start gap-2 my-4 container mx-auto">
+    <div className="flex flex-col sm:flex-col md:flex-row justify-center items-center sm:items-start md:items-start lg:items-start xl:items-start gap-2 my-4 p-4 container mx-auto">
       <div className="w-full">
         <div>
           <motion.h1
