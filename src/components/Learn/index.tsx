@@ -1,11 +1,11 @@
 import React from "react";
 import Example from "./Example";
-import AboutComponent from "./About";
+import About from "./About";
 
 const LearnKnapsack: React.FC = () => {
   return (
     <section className="w-full">
-      <AboutComponent />
+      <About />
       <Example />
     </section>
   );

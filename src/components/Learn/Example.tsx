@@ -1,61 +1,95 @@
-import Card from "../Card";
-import departingImage from "../../assets/departing.png";
+import { motion } from "framer-motion";
+import { ShoppingBag, Weight, DollarSign } from "lucide-react";
 
 const Example = () => {
-  return (
-    <div className="flex flex-col sm:flex-col md:flex-row-reverse justify-center items-center sm:items-start md:items-start lg:items-start xl:items-start gap-2 my-4 p-4 container mx-auto">
-      <div className="w-full">
-        <Card title={"Example 📊"}>
-          <p className="text-gray-700 mb-4">
-            Let’s say your bag can carry <strong>5 kg</strong> and you have:
-          </p>
-          <table className="w-full text-left border-collapse border border-gray-200 mb-4">
-            <thead>
-              <tr className="bg-indigo-100">
-                <th className="border p-2">Item</th>
-                <th className="border p-2">Weight</th>
-                <th className="border p-2">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border p-2">🍎 Apple</td>
-                <td className="border p-2">1 kg</td>
-                <td className="border p-2">2</td>
-              </tr>
-              <tr>
-                <td className="border p-2">🧀 Cheese</td>
-                <td className="border p-2">3 kg</td>
-                <td className="border p-2">4</td>
-              </tr>
-              <tr>
-                <td className="border p-2">💎 Diamond</td>
-                <td className="border p-2">4 kg</td>
-                <td className="border p-2">10</td>
-              </tr>
-              <tr>
-                <td className="border p-2">🪓 Axe</td>
-                <td className="border p-2">2 kg</td>
-                <td className="border p-2">6</td>
-              </tr>
-            </tbody>
-          </table>
+  const items = [
+    { name: "Laptop", value: 2000, weight: 3, color: "from-blue-500/20" },
+    { name: "Camera", value: 1200, weight: 1, color: "from-indigo-500/20" },
+    { name: "Watch", value: 500, weight: 0.5, color: "from-purple-500/20" },
+  ];
 
-          <p className="text-gray-700">
-            ✅ Best choice: <strong>Apple (1 kg)</strong> +{" "}
-            <strong>Diamond (4 kg)</strong> → Total 5 kg, total value{" "}
-            <strong>12</strong> 💰
+  return (
+    <section className="py-24 bg-[#050505] text-white px-6 relative overflow-hidden">
+      {/* Effet visuel de fond */}
+      <div className="absolute top-1/2 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="inline-flex items-center gap-2 text-blue-400 text-xs tracking-widest uppercase mb-4"
+          >
+            <ShoppingBag size={14} />
+            <span>Practical Scenario</span>
+          </motion.div>
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Concrete Example
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className={`relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br ${item.color} to-transparent backdrop-blur-sm group`}
+            >
+              <div className="mb-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-blue-300">
+                  {i === 0 ? (
+                    <ShoppingBag size={20} />
+                  ) : i === 1 ? (
+                    <Weight size={20} />
+                  ) : (
+                    <DollarSign size={20} />
+                  )}
+                </div>
+              </div>
+
+              <h3 className="text-xl font-medium mb-4">{item.name}</h3>
+
+              <div className="space-y-3">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Value</span>
+                  <span className="text-blue-400 font-mono">${item.value}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-500">Weight</span>
+                  <span className="text-gray-300 font-mono">
+                    {item.weight} kg
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-6 h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "100%" }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                  className="h-full bg-blue-500/40"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="mt-16 p-6 rounded-2xl border border-dashed border-white/10 text-center"
+        >
+          <p className="text-gray-500 text-sm italic">
+            "Capacity Limit: 4kg — Which items would you pick to get the max
+            value?"
           </p>
-        </Card>
+        </motion.div>
       </div>
-      <div className="w-full bg-amber-200 flex justify-center items-center">
-        <img
-          className="w-full h-full"
-          src={departingImage}
-          alt="the best example image of knapsack problem"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 

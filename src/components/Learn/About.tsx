@@ -1,53 +1,69 @@
 import { motion } from "framer-motion";
-import Card from "../Card";
-import Links from "./Links";
-import TravelersImage from "../../assets/travelers.png";
+import { Brain, Target, Zap } from "lucide-react";
 
-const AboutComponent = () => {
+const About = () => {
+  const features = [
+    {
+      icon: <Brain className="text-blue-400" size={24} />,
+      title: "Decision Making",
+      desc: "It models real-world situations where resource allocation is limited.",
+    },
+    {
+      icon: <Target className="text-indigo-400" size={24} />,
+      title: "Optimization",
+      desc: "Find the absolute best mathematical solution among millions of combos.",
+    },
+    {
+      icon: <Zap className="text-purple-400" size={24} />,
+      title: "Efficiency",
+      desc: "Solvable via Dynamic Programming to turn complexity into speed.",
+    },
+  ];
+
   return (
-    <div className="flex flex-col sm:flex-col md:flex-row justify-center items-center sm:items-start md:items-start lg:items-start xl:items-start gap-2 my-4 p-4 container mx-auto">
-      <div className="w-full">
-        <div>
-          <motion.h1
-            className="text-xl sm:text-lg md:text-xl text-center"
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
+    <section className="py-24 bg-[#050505] text-white px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Knapsack Problem Algorithm
-          </motion.h1>
-          <motion.p
-            className="text-center text-xs m-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 1 }}
-          >
-            A friendly guide for beginners who want to understand one of the
-            most famous optimization problems in computer science
-          </motion.p>
+            <h2 className="text-3xl font-semibold mb-6 tracking-tight">
+              Behind the <span className="text-blue-400">Algorithm</span>
+            </h2>
+            <p className="text-gray-400 leading-relaxed mb-6 font-light">
+              The Knapsack Problem is more than a puzzle; it's a cornerstone of
+              computer science. Imagine a hiker who must choose which items to
+              put in their backpack. Each item has a weight and a value. The
+              goal? Maximize the total value without breaking the bag.
+            </p>
+            <div className="h-px w-20 bg-blue-500/50 mb-6" />
+          </motion.div>
+
+          <div className="grid gap-6">
+            {features.map((f, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+              >
+                <div className="mt-1">{f.icon}</div>
+                <div>
+                  <h3 className="font-medium text-sm mb-1">{f.title}</h3>
+                  <p className="text-gray-500 text-sm font-light">{f.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-
-        <Card title="What’s the Knapsack Problem?">
-          Imagine you're packing a backpack for an adventure. Your bag can only
-          hold a limited weight. You have several items — each with a
-          <strong> weight </strong> and a <strong> value</strong>. Your goal is
-          simple:
-          <span className="text-blue-600">
-            {" "}
-            pick the items that give you the highest total value without
-            exceeding your bag’s limit!
-          </span>{" "}
-        </Card>
-
-        <Card title={"Official Resources 🔗"}>
-          <Links />
-        </Card>
       </div>
-      <div className="w-full flex justify-center items-center">
-        <img src={TravelersImage} alt="" className="w-full h-full" />
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default AboutComponent;
+export default About;
