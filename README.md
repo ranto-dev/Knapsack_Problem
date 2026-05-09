@@ -11,73 +11,71 @@
 
 </div>
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Status](https://img.shields.io/badge/Status-In_Progress-orange)
+<div flex justify-center gap-2>
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
+    <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+</div>
 
-## Description
+<br />
 
-The **Knapsack Problem Solver** is an interactive web-based application designed to help users understand and experiment with the **0/1 Knapsack algorithm**.
+## 💡 The Vision
 
-It provides a visual and hands-on way to explore how dynamic programming is used to solve optimization problems efficiently.
+In a world of finite resources, **optimization isn't just a choice—it's a necessity.**
 
-## Documentation & Learning Resources
+**Knapsack Lab** is an immersive environment designed to bridge the gap between abstract mathematical theory and tangible digital experience. By leveraging **Dynamic Programming**, we transform a classic NP-complete challenge into a fluid, visual journey. Whether you are an engineer fine-tuning your logic or a student discovering the power of DP, this tool is built to provide clarity at scale.
 
-You should see my documentation [Here](/docs/docs.md)
+## ✨ Key Features
 
-Another, to better understand the algorithm, here are some useful resources:
+- **Mathematical Precision** – Implements the 0/1 Knapsack algorithm with a focus on time complexity optimization $O(nW)$.
+- **Reactive Architecture** – Real-time recalculation as you toggle weights and values. Experience zero-latency optimization.
+- **Premium UX/UI** – A dark-mode, high-fidelity interface built with **Framer Motion** for butter-smooth transitions.
+- **Visual Intelligence** – (Roadmap) Future integration of real-time DP table heatmaps to visualize how the "Bellman Equation" solves subproblems.
 
-- 📘 [https://en.wikipedia.org/wiki/Knapsack_problem](https://en.wikipedia.org/wiki/Knapsack_problem)
-- 📗 [https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/](https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/)
-- 🎥 [https://www.youtube.com/results?search_query=knapsack+problem+dynamic+programming](https://www.youtube.com/results?search_query=knapsack+problem+dynamic+programming)
+## 🛠 Tech Stack
 
-## Features
+Our stack is chosen for type-safety, performance, and maintainability:
 
-- **0/1 Knapsack Algorithm Implementation**
-  Efficient solution using dynamic programming.
+- **Runtime:** [React 18](https://reactjs.org/) with Functional Components & Hooks.
+- **Logic:** [TypeScript](https://www.typescriptlang.org/) for robust, self-documenting algorithmic code.
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for a utility-first, scalable design system.
+- **Motion:** [Framer Motion](https://www.framer.com/motion/) for declarative, high-performance animations.
 
-- **Interactive Experimentation**
-  Test different item sets and capacities in real time.
+## 🚀 Quick Start
 
-- **Visualization Ready**
-  Helps understand how optimal solutions are built step by step.
-
-- **User-Friendly Interface**
-  Simple and intuitive UI built with React.
-
-- **Fast Computation**
-  Optimized logic using TypeScript.
-
-## Tech Stack
-
-- ⚛️ React
-- 🟦 TypeScript
-- 🎨 Tailwindcss
-- 🧠 Dynamic Programming
-
-## Getting Started
-
-### 📦 Installation
+Clone the repository and enter the local environment:
 
 ```bash
 git clone git@github.com:ranto-dev/Knapsack_Problem.git
 cd Knapsack_Problem
 ```
 
-### ▶️ Run the project
+Spin up the local development server:
 
 ```bash
-# install dependencies
+# Install dependencies with precision
 npm install
 
-# start development server
+# Ignite the dev environment
 npm run dev
+
 ```
 
-## Upcoming Features
+## 📚 Engineering Deep Dive
 
-- [ ] Step-by-step visualization of DP table
-- [ ] Graphical representation of selected items
-- [ ] Support for Fractional Knapsack
-- [ ] Import/export dataset (JSON/CSV)
-- [ ] Interactive learning mode (guided explanations)
-- [ ] Responsive UI improvements
-- [ ] Deployment (Vercel / Netlify)
+The core solver utilizes a bottom-up Dynamic Programming approach.
+
+> **The Goal:** Maximize $\sum_{i=1}^{n} v_i x_i$ subject to $\sum_{i=1}^{n} w_i x_i \leq W$, where $x_i \in \{0, 1\}$.
+
+Explore our internal documentation for a breakdown of the recursive formula and state space optimization:
+👉 [Read the Technical Docs](https://www.google.com/search?q=/docs/docs.md)
+
+## 🗺 Roadmap
+
+- [x] **Core Engine:** 0/1 Knapsack DP Implementation.
+- [x] **Modern UI:** Responsive Dashboard & Dark Mode.
+- [ ] **Visual Matrix:** Real-time step-by-step DP table visualization.
+- [ ] **Analytics:** Compare DP vs. Greedy approach performance.
+- [ ] **Export:** Download datasets as JSON/CSV for external analysis.
+- [ ] **Live Demo:** Deploying to Vercel Edge Network.
