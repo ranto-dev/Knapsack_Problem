@@ -8,12 +8,7 @@ const App = () => {
     <>
       <Header />
       <LearnKnapsack />
-      <div
-        id="try-it"
-        className="flex justify-center items-center container m-auto"
-      >
-        <Knapsack />
-      </div>
+      <Knapsack />
       <Footer />
     </>
   );
